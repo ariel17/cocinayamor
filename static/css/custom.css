@@ -1,0 +1,21 @@
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+html, body, .container-fluid {
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.navbar-brand {
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.row {
+    height: 100%;
+}
+
+.cya-type {
+    background-image: url("https://picsum.photos/1000/1000/?random");
+    height: 100%;
+}
