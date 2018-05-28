@@ -15,7 +15,16 @@ html, body, .container-fluid {
     height: 100%;
 }
 
-.cya-type {
-    background-image: url("https://picsum.photos/1000/1000/?random");
+.cya-type-informal {
+    background-image: url("../img/type-informal.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+}
+
+.cya-type-formal {
+    background-image: url("../img/type-formal.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
     height: 100%;
 }
