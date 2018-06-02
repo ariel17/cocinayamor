@@ -7,6 +7,10 @@ html, body, .container-fluid {
     overflow-y: hidden;
 }
 
+.navbar {
+    padding: 0;
+}
+
 .navbar-brand {
     font-family: 'Berkshire Swash', cursive;
 }
@@ -15,37 +19,61 @@ html, body, .container-fluid {
     height: 100%;
 }
 
-.overlay {
+.cya-overlay {
     height: 100%;
+    width: 110%;
     margin-left: -1em;
     margin-right: -1em;
     transition: 0.5s;
+    display: table;
 }
 
-.overlay:hover {
+.cya-overlay:hover {
     background: rgba(3, 92, 161, 0.6);
     overflow: hidden;
     height: 100%;
     z-index: 2;
 }
 
-.cya-type-informal {
+.cya-informal {
     background-image: url("../img/type-informal.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
-.cya-type-formal {
+.cya-formal {
     background-image: url("../img/type-formal.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
-.cya-type-lunch {
+.cya-lunch {
     background-image: url("../img/type-lunch.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+.cya-text {
+    height: 100%;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    font-size: 1.5em;
+    transition: 0.5s;
+}
+
+.cya-text:hover {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 10%;
+}
+
+.cya-border {
+    font-family: 'Berkshire Swash', cursive;
+    margin: 10px 120px;
+    border: 1px solid white;
 }
