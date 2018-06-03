@@ -15,7 +15,7 @@ html, body, .container-fluid {
     font-family: 'Berkshire Swash', cursive;
 }
 
-.row {
+.row-full {
     height: 100%;
 }
 
@@ -30,8 +30,6 @@ html, body, .container-fluid {
 
 .cya-overlay:hover {
     background: rgba(3, 92, 161, 0.6);
-    overflow: hidden;
-    height: 100%;
     z-index: 2;
 }
 
@@ -62,18 +60,17 @@ html, body, .container-fluid {
     display: table-cell;
     vertical-align: middle;
     color: white;
-    font-size: 1.5em;
     transition: 0.5s;
+    font-size: 1.5em;
 }
 
 .cya-text:hover {
-    font-size: 2.5em;
     font-weight: bold;
-    margin: 10%;
+    -webkit-transform: scale(1.5);
 }
 
 .cya-border {
     font-family: 'Berkshire Swash', cursive;
-    margin: 10px 120px;
+    margin: 10px 140px;
     border: 1px solid white;
 }
