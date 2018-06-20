@@ -54,6 +54,41 @@ html, body, .container-fluid {
     background-position: center center;
 }
 
+.cya-fingerfood {
+    background-image: url("../img/type-fingerfood.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-pizzaparty {
+    background-image: url("../img/type-pizzaparty.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-cazuela {
+    background-image: url("../img/type-cazuela.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-pernil {
+    background-image: url("../img/type-pernil.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-informal-postre {
+    background-image: url("../img/type-informal-postre.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 .cya-text {
     height: 100%;
     text-align: center;
@@ -64,6 +99,23 @@ html, body, .container-fluid {
     font-size: 1.5em;
 }
 
+.cya-title {
+    font-family: 'Berkshire Swash', cursive;
+    color: white;
+}
+
+.cya-description {
+    color: white;
+}
+
+.cya-description-background {
+    background: rgba(3, 92, 161, 0.6);
+    z-index: 2;
+    height: 100%;
+    width: 110%;
+    margin-left: -5%;
+}
+
 .cya-text:hover {
     font-weight: bold;
     -webkit-transform: scale(1.5);
@@ -71,6 +123,41 @@ html, body, .container-fluid {
 
 .cya-border {
     font-family: 'Berkshire Swash', cursive;
-    margin: 10px 140px;
+    margin: 5% 15%;
     border: 1px solid white;
+}
+
+.cya-border > a {
+    font-family: 'Berkshire Swash', cursive;
+    text-decoration: none;
+    color: white;
+}
+
+.cya-price {
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    font-size: 1.5em;
+}
+
+.cya-btn-center {
+    display: block;
+    margin: 0 auto;
+}
+
+.cya-btn-primary {
+    color: #720289;
+    background-color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 5% 25%;
+}
+
+.cya-btn-secondary {
+    color: white;
+    background-color: transparent;
+    border-color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 5% 25%;
 }
