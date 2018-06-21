@@ -47,8 +47,99 @@ html, body, .container-fluid {
     background-position: center center;
 }
 
+.cya-formal-reception-1 {
+    background-image: url("../img/type-formal-reception-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-formal-reception-2 {
+    background-image: url("../img/type-formal-reception-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-formal-reception-3 {
+    background-image: url("../img/type-formal-reception-3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-formal-entry-1 {
+    background-image: url("../img/type-formal-entry-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-formal-entry-2 {
+    background-image: url("../img/type-formal-entry-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-formal-entry-3 {
+    background-image: url("../img/type-formal-entry-3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-formal-principal-1 {
+    background-image: url("../img/type-formal-principal-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-formal-principal-2 {
+    background-image: url("../img/type-formal-principal-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-formal-principal-3 {
+    background-image: url("../img/type-formal-principal-3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-formal-dessert {
+    background-image: url("../img/type-formal-dessert.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-budget {
+    background-image: url("../img/budget.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-contact {
+    background-image: url("../img/contact.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 .cya-lunch {
     background-image: url("../img/type-lunch.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-country {
+    background-image: url("../img/type-country.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -68,7 +159,7 @@ html, body, .container-fluid {
     background-position: center center;
 }
 
-.cya-cazuela {
+.cya-seafood {
     background-image: url("../img/type-cazuela.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -82,8 +173,64 @@ html, body, .container-fluid {
     background-position: center center;
 }
 
-.cya-informal-postre {
+.cya-informal-dessert {
     background-image: url("../img/type-informal-postre.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-informal-pizzaparty-1 {
+    background-image: url("../img/type-informal-pizzaparty-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-informal-pizzaparty-2 {
+    background-image: url("../img/type-informal-pizzaparty-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-informal-pizzaparty-3 {
+    background-image: url("../img/type-informal-pizzaparty-3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-aditional-sweet {
+    background-image: url("../img/type-informal-aditional-sweet.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-aditional-salty {
+    background-image: url("../img/type-informal-aditional-salty.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-aditional-drinks {
+    background-image: url("../img/type-informal-aditional-drinks.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-aditional-coffee {
+    background-image: url("../img/type-informal-aditional-coffee.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-sweet-table {
+    background-image: url("../img/type-informal-sweet-table.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -104,6 +251,7 @@ html, body, .container-fluid {
     color: white;
     transition: 0.5s;
     font-size: 1.5em;
+    font-family: 'Berkshire Swash', cursive;
 }
 
 .cya-title {
@@ -167,4 +315,12 @@ html, body, .container-fluid {
     border-radius: 30px;
     text-decoration: none;
     margin: 5% 25%;
+}
+
+.cya-section {
+    background-color: #B6CC00;
+    font-size: 1.5em;
+    height: 10%;
+    margin-bottom: -20%;
+    z-index: 2;
 }
