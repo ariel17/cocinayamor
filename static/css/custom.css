@@ -257,6 +257,7 @@ html, body, .container-fluid {
 .cya-title {
     font-family: 'Berkshire Swash', cursive;
     color: white;
+    padding: 10px 15px;
 }
 
 .cya-description {
@@ -269,6 +270,7 @@ html, body, .container-fluid {
     height: 100%;
     width: 110%;
     margin-left: -5%;
+    position: relative;
 }
 
 .cya-text:hover {
@@ -306,6 +308,7 @@ html, body, .container-fluid {
     border-radius: 30px;
     text-decoration: none;
     margin: 5% 25%;
+    font-size: 1.2em;
 }
 
 .cya-btn-secondary {
@@ -323,4 +326,10 @@ html, body, .container-fluid {
     height: 10%;
     margin-bottom: -20%;
     z-index: 2;
+}
+
+.cya-nav {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
 }
