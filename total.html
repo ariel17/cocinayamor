@@ -7,6 +7,7 @@
         <title>Cocina y Amor</title>
         <link rel="stylesheet" href="./static/css/bootstrap.min.css" type="text/css" charset="utf-8">
         <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Raleway" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
         <link rel="stylesheet" href="./static/css/color.css" type="text/css" charset="utf-8">
         <link rel="stylesheet" href="./static/css/custom.css" type="text/css" charset="utf-8">
         <script src="./static/js/jquery.min.js"></script>
@@ -43,17 +44,50 @@
             <div class="row row-full">
                 <div class="col-sm-12 col-md-6 cya-budget">
                     <div class="cya-description-background">
-                        <h1 class="text-center cya-title">Su presupuesto</h1>
+                        <h1 class="text-center cya-title">Tu presupuesto</h1>
+                        <div class="cya-description">
+                            <p>Servicios elegidos:</p>
+                        </div>
                         <ul class="cya-description">
                             <li>Finger food: $250 por persona.</li>
                             <li>Pernil de cerdo: $90 por persona.</li>
                             <li>Postre: $30 por persona.</li>
                         </ul>
+                        <div class="cya-description">
+                            <p>
+                                Cantidad de personas:
+                                <select class="form-control cya-select">
+                                    <option selected>20</option>
+                                    <option>30</option>
+                                    <option>40</option>
+                                    <option>50</option>
+                                    <option>60</option>
+                                    <option>70</option>
+                                    <option>80</option>
+                                    <option>90</option>
+                                    <option>100</option>
+                                    <option>120</option>
+                                    <option>140</option>
+                                    <option>160</option>
+                                    <option>180</option>
+                                    <option>200 &oacute; m&aacute;s</option>
+                                </select>
+                            </p>
+                        </div>
+
                         <div class="cya-price">
-                            <p class="cya-border"><a href="fingerfood.html">$370</a></p>
+                            <p class="cya-border"><a href="fingerfood.html">Total: $370</a></p>
+                        </div>
+                        <div class="cya-description">
+                            <p>Los precios son v&aacute;lido durante 30 d&iacute;as.</p>
                         </div>
                         <div class="cya-nav">
-                            <a href="contact.html" role="button" class="btn btn-primary cya-btn-center cya-btn-primary">Contactar</a>
+                            <div class="col-sm-12 col-md-6">
+                                <a href="contact.html" role="button" class="btn btn-primary cya-btn-center cya-btn-primary"><i class="fa fa-phone"></i>&nbsp;Contactar</a>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <a href="#" role="button" class="btn btn-primary cya-btn-center cya-btn-secondary"><i class="fa fa-share-alt"></i>&nbsp;Compartir</a>
+                            </div>
                         </div>
                     </div>
                 </div>

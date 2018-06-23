@@ -15,7 +15,7 @@ html, body, .container-fluid {
 }
 
 .row-full {
-    height: 100%;
+    min-height: 100%;
 }
 
 .cya-overlay {
@@ -235,8 +235,15 @@ html, body, .container-fluid {
     background-position: center center;
 }
 
+.cya-kids {
+    background-image: url("../img/type-kids.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 .cya-done {
-    background-color: #035C83;
+    background-color: #DC4BFB;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -313,9 +320,9 @@ html, body, .container-fluid {
 }
 
 .cya-btn-secondary {
-    color: #90DBFB;
+    color: white;
     background-color: transparent;
-    border-color: #90DBFB;
+    border-color: white;
     border-radius: 30px;
     text-decoration: none;
     margin: 5% 25%;
@@ -339,4 +346,15 @@ html, body, .container-fluid {
 
 .cya-nav {
     margin-top: 40px;
+}
+
+.cya-select {
+    margin: 0 20px;
+    width: 100px;
+    text-align: center;
+    display: inline;
+}
+
+.cya-select > option {
+    text-align: center;
 }
