@@ -363,6 +363,10 @@ html, body, .container-fluid {
     text-align: center;
 }
 
+.cya-h60 {
+    height: 60%;
+}
+
 .cya-h70 {
     height: 70%;
 }
