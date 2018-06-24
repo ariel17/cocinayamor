@@ -355,6 +355,14 @@ html, body, .container-fluid {
     display: inline;
 }
 
+.cya-select-multiple {
+    height: 90%;
+}
+
 .cya-select > option {
     text-align: center;
+}
+
+.cya-h70 {
+    height: 70%;
 }
