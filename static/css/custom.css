@@ -268,12 +268,29 @@ html, body, .container-fluid {
     display: inline;
 }
 
-.cya-select-multiple {
-    height: 90%;
-}
-
 .cya-select > option {
     text-align: center;
+}
+
+.cya-select-multiple {
+    height: 90%;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+}
+
+.cya-select-multiple:focus {
+    background-color: transparent;
+    color: white;
+}
+
+.cya-select-multiple > option {
+    color: white;
+}
+
+.cya-select-multiple:focus > option:checked { 
+    background: #E5FF09 linear-gradient(0deg, #E5FF09 0%, #E5FF09 100%);
+    color: #720289;
 }
 
 .cya-h60 {
