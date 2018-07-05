@@ -181,6 +181,8 @@ html, body, .container-fluid {
 
 .cya-description {
     color: white;
+    margin-left: 4%;
+    margin-right: 8%;
 }
 
 .cya-description > p {
@@ -208,7 +210,7 @@ html, body, .container-fluid {
 
 .cya-border {
     font-family: 'Berkshire Swash', cursive;
-    margin: 5% 15%;
+    margin: 5% 25%;
     border: 1px solid white;
 }
 
