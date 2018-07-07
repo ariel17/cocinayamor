@@ -6,7 +6,7 @@ gulp.task('default', () =>
 	gulp.src('assets/img/*')
 		.pipe(imagemin([
             imageminMozjpeg({
-                quality: 80
+                quality: 20
             })
         ]))
 		.pipe(gulp.dest('static/img'))
