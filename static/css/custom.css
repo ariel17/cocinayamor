@@ -283,16 +283,15 @@ html, body, .container-fluid {
 
 .cya-select-multiple:focus {
     background-color: transparent;
+}
+
+.cya-select-multiple:focus > option {
     color: white;
 }
 
-.cya-select-multiple > option {
-    color: white;
-}
-
-.cya-select-multiple:focus > option:checked { 
-    background: #E5FF09 linear-gradient(0deg, #E5FF09 0%, #E5FF09 100%);
-    color: #720289;
+.cya-select-multiple:focus > option:checked {
+    color: #720289 !important;
+    background: linear-gradient(0deg, #E5FF09 0%, #E5FF09 100%);
 }
 
 .cya-h30 {
