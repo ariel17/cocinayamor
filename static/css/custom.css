@@ -15,7 +15,7 @@ html, body, .container-fluid {
 }
 
 .row-full {
-    min-height: 100%;
+    min-height: 130%;
 }
 
 .cya-overlay {
