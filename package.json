@@ -1,0 +1,26 @@
+{
+  "name": "cocinayamor",
+  "version": "1.0.0",
+  "description": "* Picsum Photos: https://picsum.photos/ * Unsplash: https://unsplash.com/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ariel17/cocinayamor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ariel17/cocinayamor/issues"
+  },
+  "homepage": "https://github.com/ariel17/cocinayamor#readme",
+  "dependencies": {
+    "npm": "^6.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^4.1.0"
+  }
+}
