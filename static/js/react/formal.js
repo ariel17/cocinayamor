@@ -5,6 +5,7 @@ const formalMenuData = [
     {key: "contact", href: "contact.html", text: "Contacto", active: false}
 ]
 
+
 class SectionTitle extends React.Component {
     render() {
         return (
@@ -21,7 +22,7 @@ class Formal extends React.Component {
     render() {
         return (
             <div className="container-fluid">
-                <NavMenu data={formalMenuData} href="index-react.html" />
+                <NavMenu data={formalMenuData} href="index.html" />
                 <SectionTitle text="Recepci&oacute;n" />
                 <div className="row row-full">
                     <Option className="col-md-4 cya-formal-reception-1" href="cya-formal-reception-1.html" text="Opci&oacute;n #1" />
@@ -32,6 +33,7 @@ class Formal extends React.Component {
         );
     }
 }
+
 
 ReactDOM.render(
   <Formal />,

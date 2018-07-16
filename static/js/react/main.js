@@ -6,12 +6,11 @@ const mainMenuData = [
 ]
 
 
-
 class Main extends React.Component {
     render() {
         return (
             <div className="container-fluid">
-                <NavMenu data={mainMenuData} href="index-react.html" />
+                <NavMenu data={mainMenuData} href="index.html" />
                 <div className="row row-full">
                     <Option className="col-md-3 cya-formal" href="formal.html" text="Formal" />
                     <Option className="col-md-3 cya-informal" href="informal.html" text="Informal" />
@@ -22,6 +21,7 @@ class Main extends React.Component {
         );
     }
 }
+
 
 ReactDOM.render(
   <Main />,
