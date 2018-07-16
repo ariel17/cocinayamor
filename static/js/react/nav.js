@@ -1,7 +1,7 @@
 class NavItem extends React.Component {
     getClassName() {
         var className = "nav-item";
-        if (this.props.active == "true") {
+        if (this.props.active) {
             className += " active";
         }
         return className;
@@ -27,18 +27,12 @@ class NavMenu extends React.Component {
 
                 <div className="collapse navbar-collapse" id="menu">
                     <ul className="navbar-nav ml-auto">
-                        <NavItem href="#" text="Inicio" active="true" />
-                        <NavItem href="budgets.html" text="Presupuestos en PDF" />
-                        <NavItem href="faq.html" text="FAQ" />
-                        <NavItem href="contact.html" text="Contacto" />
+                        {this.props.data.map((item, key) => {
+                            return <NavItem key={item.key} href={item.href} text={item.text} active={item.active} />;
+                        })}
                     </ul>
                 </div>
             </nav>
         );
     }
 }
-
-ReactDOM.render(
-  <NavMenu href="index-react.html" />,
-  document.getElementById('navMenu')
-);

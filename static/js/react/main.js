@@ -1,25 +1,23 @@
-class Option extends React.Component {
-    render() {
-        return (
-            <div className={'col-sm-12 col-md-3 cya-type ' + this.props.className}>
-                <div className="cya-overlay">
-                    <div className="cya-text">
-                        <p className="cya-border"><a href={this.props.href}>{this.props.text}</a></p>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-}
+const mainMenuData = [
+    {key: "inicio", href: "#", text: "Inicio", active: true},
+    {key: "budget", href: "budgets.html", text: "Presupuestos en PDF", active: false},
+    {key: "faq", href: "faq.html", text: "FAQ", active: false},
+    {key: "contact", href: "contact.html", text: "Contacto", active: false}
+]
+
+
 
 class Main extends React.Component {
     render() {
         return (
-            <div className="row row-full">
-                <Option className="cya-formal" href="formal.html" text="Formal" />
-                <Option className="cya-informal" href="informal.html" text="Informal" />
-                <Option className="cya-lunch" href="lunch.html" text="Luch" />
-                <Option className="cya-country" href="campestre.html" text="Campestre" />
+            <div className="container-fluid">
+                <NavMenu data={mainMenuData} href="index-react.html" />
+                <div className="row row-full">
+                    <Option className="col-md-3 cya-formal" href="formal.html" text="Formal" />
+                    <Option className="col-md-3 cya-informal" href="informal.html" text="Informal" />
+                    <Option className="col-md-3 cya-lunch" href="lunch.html" text="Luch" />
+                    <Option className="col-md-3 cya-country" href="campestre.html" text="Campestre" />
+                </div>
             </div>
         );
     }
@@ -27,5 +25,5 @@ class Main extends React.Component {
 
 ReactDOM.render(
   <Main />,
-  document.getElementById('main')
+  document.getElementById('root')
 );
