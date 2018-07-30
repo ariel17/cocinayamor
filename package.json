@@ -4,6 +4,7 @@
   "description": "* Picsum Photos: https://picsum.photos/ * Unsplash: https://unsplash.com/",
   "main": "index.js",
   "scripts": {
+    "start": "python -m SimpleHTTPServer",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
