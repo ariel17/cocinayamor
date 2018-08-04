@@ -1,4 +1,4 @@
-class Option extends React.Component {
+class SectionOption extends React.Component {
     render() {
         return (
             <div className={'col-sm-12 cya-type ' + this.props.className}>
