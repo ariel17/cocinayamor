@@ -12,3 +12,7 @@
 ```bash
 $ npm start  # then open http://localhost:8000/index.html
 ```
+
+# Design
+
+Use [Atomic Design](https://medium.com/@yejodido/atomic-components-managing-dynamic-react-components-using-atomic-design-part-1-5f07451f261f).
