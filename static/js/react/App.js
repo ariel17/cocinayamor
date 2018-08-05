@@ -7,8 +7,9 @@ const defaultNav = {
         {key: "faq", href: "faq.html", text: "FAQ", active: false},
         {key: "contact", href: "contact.html", text: "Contacto", active: false}
     ]
-},
-pages = {
+}
+
+const pages = {
     home: {
         type: "section",
         data: {
@@ -257,10 +258,191 @@ pages = {
                 ]
             }
         }
-
     },
-    formalDessert1: {},
-    formalAditional: {},
+    formalDessert1: {
+        type: "detail",
+        data: {
+            detail: {
+                className: "cya-formal-dessert",
+                title: "Postres",
+                description: "Elegir 1 opción:",
+                multi: true,
+                max: 1,
+                items: [
+                    {key:1, text: "Brownie con bocha de helado."},
+                    {key:2, text: "Budín de pan con dulce de leche."},
+                    {key:3, text: "Capelina con dos gustos de helado."},
+                    {key:4, text: "Bombón suizo."},
+                    {key:5, text: "Tricolor o almendrado."},
+                    {key:6, text: "Ensalada con frutas de estación."},
+                ],
+                note: "Todos los helados incluyen salsa de chocolate y frutos rojos.",
+                price: {
+                    text: "¡Gratis!"
+                },
+                next: "formalAditional",
+            }
+        }
+    },
+    formalAditional: {
+        type: "section",
+        data: {
+            section: {
+                title: "Adicionales",
+                options: [
+                    {key: 1, className: "col-md-3 cya-sweet-table", next: "formalSweetTable", text: "Mesa dulce"},
+                    {key: 2, className: "col-md-3 cya-aditional-salty", next: "formalSalty", text: "Salado"},
+                    {key: 3, className: "col-md-3 cya-aditional-drinks", next: "formalDrinks", text: "Bebidas"},
+                    {key: 4, className: "col-md-3 cya-aditional-coffee", next: "formalCoffee", text: "Cafetería"},
+                    {key: 4, className: "col-md-12 cya-done", next: "total", text: "¡Listo!"},
+                ]
+            }
+        }
+    },
+    formalSweetTable: {
+        type: "detail",
+        data: {
+            detail: {
+                className: "cya-sweet-table",
+                title: "Mesa dulce",
+                description: "1 tarta cada 10 personas:",
+                items: [
+                    {key: 1, text: "Lemon pie."},
+                    {key: 2, text: "Chocotorta."},
+                    {key: 3, text: "Tarta frutal."},
+                    {key: 4, text: "Coco y dulce de leche."},
+                    {key: 5, text: "Pasta frola."},
+                    {key: 6, text: "Appel crumble."},
+                    {key: 7, text: "Invertida de manzana."},
+                    {key: 8, text: "Cheese cake."},
+                    {key: 9, text: "Ricota."},
+                    {key: 10, text: "Milhojas."},
+                    {key: 11, text: "Brownie."},
+                ],
+                price: {
+                    text: "$50 por persona"
+                },
+                next: "formalAditional",
+            }
+        }
+    },
+    formalSalty: {
+        type: "section",
+        data: {
+            section: {
+                title: "Adicionales salados",
+                options: [
+                    {key: 1, className: "col-md-4 cya-seafood", next: "formalSeafood", text: "Cazuelas"},
+                    {key: 2, className: "col-md-4 cya-pernil", next: "formalPernil", text: "Pernil"},
+                    {key: 3, className: "col-md-4 cya-kids", next: "formalKids", text: "Menú para niños"},
+                ]
+            }
+        }
+    },
+    formalSeafood: {
+        type: "detail",
+        data: {
+            detail: {
+                className: "cya-seafood",
+                title: "Cazuelas",
+                description: "Elegir 1 opción:",
+                multi: true,
+                max: 1,
+                items: [
+                    {key:1, text: "Pollo y vegetales."},
+                    {key:2, text: "Carne y vegetales."},
+                    {key:3, text: "Ravioles con salsa de verdeo, champignon o fileto."},
+                ],
+                price: {
+                    text: "$100 por persona"
+                },
+                next: "formalAditional",
+            }
+        }
+    },
+    formalPernil: {
+        type: "detail",
+        data: {
+            detail: {
+                className: "cya-pernil",
+                title: "Pernil de cerdo",
+                description: "El servicio comprende:",
+                items: [
+                    {key: 1, text: "Pernil de cerdo."},
+                    {key: 2, text: "Figazas de manteca."},
+                    {key: 3, text: "Salsas: ciboulette, albahaca, queso azul, criolla, provenzal, mayonesa y Savora."},
+                ],
+                price: {
+                    text: "$90 por persona"
+                },
+                next: "formalAditional",
+            }
+        }
+    },
+    formalKids: {
+        type: "detail",
+        data: {
+            detail: {
+                className: "cya-kids",
+                title: "Menú para niños",
+                description: "Para edades entre 5 y 12 años. Elegir 1 opción:",
+                multi: true,
+                max: 1,
+                items: [
+                    {key:1, text: "Milanesa de peceto o pollo con papas fritas/noisse."},
+                    {key:2, text: "Milanesa de peceto o pollo napolitana con papas fritas/noisse."},
+                    {key:3, text: "Hamburguesas con queso chedar y papas fritas."},
+                    {key:4, text: "Nugets con papas fritas."},
+                ],
+                price: {
+                    text: "$120 por niño"
+                },
+                next: "formalAditional",
+            }
+        }
+    },
+    formalDrinks: {
+        type: "detail",
+        data: {
+            detail: {
+                className: "cya-aditional-drinks",
+                title: "Bebidas",
+                description: "El servicio comprende:",
+                items: [
+                    {key: 1, text: "Línea Coca-Cola."},
+                    {key: 2, text: "Agua."},
+                    {key: 3, text: "Cerveza."},
+                    {key: 4, text: "Aperitivos (Gancia y Fernet)."},
+                ],
+                price: {
+                    text: "$50 por persona"
+                },
+                next: "formalAditional",
+            }
+        }
+    },
+    formalCoffee: {
+        type: "detail",
+        data: {
+            detail: {
+                className: "cya-aditional-coffee",
+                title: "Cafetería",
+                description: "El servicio comprende:",
+                items: [
+                    {key:1, text: "Vajilla (vasos térmicos y cucharitas descartables)."},
+                    {key:2, text: "Termos de agua caliente."},
+                    {key:3, text: "Termos de café."},
+                    {key:4, text: "Caja de madera con distintos gustos de té."},
+                    {key:5, text: "Azucar y edulcorante."},
+                    {key:6, text: "Leche tibia para cortar."},
+                ],
+                price: {
+                    text: "$50 por persona"
+                },
+                next: "formalAditional",
+            }
+        }
+    },
     total: {},
     contact: {}
 }
