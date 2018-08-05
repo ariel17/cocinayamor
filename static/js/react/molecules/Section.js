@@ -6,7 +6,7 @@ class Section extends React.Component {
         }
         let section = <div key="section" className="row row-full">
             {this.props.options.map((option, key) => {
-                return <SectionOption key={option.key} className={option.className} href={option.href} text={option.text} />
+                return <SectionOption key={option.key} className={option.className} onClick={() => this.props.onClick(option.next)} text={option.text} />
             })}
         </div>;
         return [title, section];
