@@ -253,7 +253,7 @@ const pages = {
             section: {
                 title: "Postre",
                 options: [
-                    {key: "formal-dessert-1", className: "col-md-6 cya-formal-dessert-1", next: "formalDessert1", text: "¡Gratis!"},
+                    {key: "formal-dessert-1", className: "col-md-6 cya-formal-dessert", next: "formalDessert1", text: "¡Gratis!"},
                     {key: "formal-dessert-2", className: "col-md-6 cya-done", next: "formalAditional", text: "Sin postre"},
                 ]
             }
@@ -443,7 +443,34 @@ const pages = {
             }
         }
     },
-    total: {},
+    total: {
+        type: "total",
+        data: {
+            total: {
+                className: "cya-common",
+                title: "Tu presupuesto",
+                description: "Servicios elegidos:",
+                options: [
+                    {key: 1, text: 20, selected: true},
+                    {key: 1, text: 30},
+                    {key: 1, text: 40},
+                    {key: 1, text: 50},
+                    {key: 1, text: 60},
+                    {key: 1, text: 70},
+                    {key: 1, text: 80},
+                    {key: 1, text: 90},
+                    {key: 1, text: 100},
+                    {key: 1, text: 120},
+                    {key: 1, text: 140},
+                    {key: 1, text: 160},
+                    {key: 1, text: 180},
+                    {key: 1, text: "200 ó más"},
+                ],
+                note: "Los precios son válidos durante 30 días.",
+                next: "contact",
+            }
+        }
+    },
     contact: {}
 }
 
@@ -470,11 +497,13 @@ class App extends React.Component {
         if (page.data.nav == null) {
             page.data.nav = defaultNav;
         }
-        if (page.type == "section") { 
-            return <SectionPage data={page.data} />
-        }
-        if (page.type == "detail") { 
-            return <DetailPage data={page.data} />
+        switch(page.type) {
+            case "section":
+                return <SectionPage data={page.data} />;
+            case "detail":
+                return <DetailPage data={page.data} />;
+            case "total":
+                return <TotalPage data={page.data} />;
         }
     }
 }
