@@ -26,10 +26,10 @@ const pages = {
             section: {
                 title: "",
                 options: [
-                    {key: "formal", className: "col-md-3 cya-formal", next: "formal", text: "Formal"},
-                    {key: "informal", className: "col-md-3 cya-informal", next: "informal", text: "Informal"},
-                    {key: "lunch", className: "col-md-3 cya-lunch", next: "lunch", text: "Lunch"},
-                    {key: "country", className: "col-md-3 cya-country", next: "campestre", text: "Campestre"}
+                    {key: "formal", next: {key: "formal"}, className: "col-md-3 cya-formal", text: "Formal"},
+                    {key: "informal", next: {key: "informal"}, className: "col-md-3 cya-informal", text: "Informal"},
+                    {key: "lunch", next: {key: "lunch"}, className: "col-md-3 cya-lunch", text: "Lunch"},
+                    {key: "country", next: {key: "campestre"}, className: "col-md-3 cya-country", text: "Campestre"}
                 ]
             }
         }
@@ -40,9 +40,9 @@ const pages = {
             section: {
                 title: "Recepción",
                 options: [
-                    {key: "formal-reception-1", className: "col-md-4 cya-formal-reception-1", next: "formalReception1", text: "Opción #1"},
-                    {key: "formal-reception-2", className: "col-md-4 cya-formal-reception-2", next: "formalReception2", text: "Opción #2"},
-                    {key: "formal-reception-3", className: "col-md-4 cya-formal-reception-3", next: "formalReception3", text: "Opción #3"},
+                    {key: "formal-reception-1", next: {key: "formalReception1"}, className: "col-md-4 cya-formal-reception-1", text: "Opción #1"},
+                    {key: "formal-reception-2", next: {key: "formalReception2"}, className: "col-md-4 cya-formal-reception-2", text: "Opción #2"},
+                    {key: "formal-reception-3", next: {key: "formalReception3"}, className: "col-md-4 cya-formal-reception-3", text: "Opción #3"},
                 ]
             }
         }
@@ -65,7 +65,10 @@ const pages = {
                 price: {
                     text: "$110 por persona"
                 },
-                next: "formalEntry",
+                next: {
+                    key: "formalEntry",
+                    mustAppend: true
+                }
             }
         }
     },
@@ -88,7 +91,10 @@ const pages = {
                 price: {
                     text: "$130 por persona"
                 },
-                next: "formalEntry",
+                next: {
+                    key: "formalEntry",
+                    mustAppend: true
+                }
             }
         }
     },
@@ -109,7 +115,10 @@ const pages = {
                 price: {
                     text: "$150 por persona"
                 },
-                next: "formalEntry",
+                next: {
+                    key: "formalEntry",
+                    mustAppend: true
+                }
             }
         }
     },
@@ -119,10 +128,10 @@ const pages = {
             section: {
                 title: "Entrada",
                 options: [
-                    {key: "formal-entry-1", className: "col-md-3 cya-formal-entry-1", next: "formalEntry1", text: "Opción #1"},
-                    {key: "formal-entry-2", className: "col-md-3 cya-formal-entry-2", next: "formalEntry2", text: "Opción #2"},
-                    {key: "formal-entry-3", className: "col-md-3 cya-formal-entry-3", next: "formalEntry3", text: "Opción #3"},
-                    {key: "formal-entry-4", className: "col-md-3 cya-done", next: "formalPrincipal", text: "Sin entrada"},
+                    {key: "formal-entry-1", next: {key: "formalEntry1"}, className: "col-md-3 cya-formal-entry-1", text: "Opción #1"},
+                    {key: "formal-entry-2", next: {key: "formalEntry2"}, className: "col-md-3 cya-formal-entry-2", text: "Opción #2"},
+                    {key: "formal-entry-3", next: {key: "formalEntry3"}, className: "col-md-3 cya-formal-entry-3", text: "Opción #3"},
+                    {key: "formal-entry-4", next: {key: "formalPrincipal"}, className: "col-md-3 cya-done", text: "Sin entrada"},
                 ]
             }
         }
@@ -144,7 +153,10 @@ const pages = {
                 price: {
                     text: "$100 por persona"
                 },
-                next: "formalPrincipal",
+                next: {
+                    key: "formalPrincipal",
+                    mustAppend: true
+                }
             }
         }
     },
@@ -161,7 +173,10 @@ const pages = {
                 price: {
                     text: "$100 por persona"
                 },
-                next: "formalPrincipal",
+                next: {
+                    key: "formalPrincipal",
+                    mustAppend: true
+                }
             }
         }
     },
@@ -178,7 +193,10 @@ const pages = {
                 price: {
                     text: "$100 por persona"
                 },
-                next: "formalPrincipal",
+                next: {
+                    key: "formalPrincipal",
+                    mustAppend: true
+                }
             }
         }
     },
@@ -188,8 +206,8 @@ const pages = {
             section: {
                 title: "Plato principal",
                 options: [
-                    {key: "formal-principal-1", className: "col-md-6 cya-formal-entry-1", next: "formalPrincipal1", text: "Opción #1"},
-                    {key: "formal-principal-2", className: "col-md-6 cya-formal-entry-2", next: "formalPrincipal2", text: "Opción #2"},
+                    {key: "formal-principal-1", next: {key: "formalPrincipal1"}, className: "col-md-6 cya-formal-entry-1", text: "Opción #1"},
+                    {key: "formal-principal-2", next: {key: "formalPrincipal2"}, className: "col-md-6 cya-formal-entry-2", text: "Opción #2"},
                 ]
             }
         }
@@ -216,7 +234,10 @@ const pages = {
                 price: {
                     text: "$210 por persona"
                 },
-                next: "formalDessert",
+                next: {
+                    key: "formalDessert",
+                    mustAppend: true
+                }
             }
         }
     },
@@ -243,7 +264,10 @@ const pages = {
                 price: {
                     text: "$210 por persona"
                 },
-                next: "formalDessert",
+                next: {
+                    key: "formalDessert",
+                    mustAppend: true
+                }
             }
         }
     },
@@ -253,8 +277,8 @@ const pages = {
             section: {
                 title: "Postre",
                 options: [
-                    {key: "formal-dessert-1", className: "col-md-6 cya-formal-dessert", next: "formalDessert1", text: "¡Gratis!"},
-                    {key: "formal-dessert-2", className: "col-md-6 cya-done", next: "formalAditional", text: "Sin postre"},
+                    {key: "formal-dessert-1", next: {key: "formalDessert1"}, className: "col-md-6 cya-formal-dessert", text: "¡Gratis!"},
+                    {key: "formal-dessert-2", next: {key: "formalAditional"}, className: "col-md-6 cya-done", text: "Sin postre"},
                 ]
             }
         }
@@ -280,7 +304,10 @@ const pages = {
                 price: {
                     text: "¡Gratis!"
                 },
-                next: "formalAditional",
+                next: {
+                    key: "formalAditional",
+                    mustAppend: true
+                }
             }
         }
     },
@@ -290,11 +317,11 @@ const pages = {
             section: {
                 title: "Adicionales",
                 options: [
-                    {key: 1, className: "col-md-3 cya-sweet-table", next: "formalSweetTable", text: "Mesa dulce"},
-                    {key: 2, className: "col-md-3 cya-aditional-salty", next: "formalSalty", text: "Salado"},
-                    {key: 3, className: "col-md-3 cya-aditional-drinks", next: "formalDrinks", text: "Bebidas"},
-                    {key: 4, className: "col-md-3 cya-aditional-coffee", next: "formalCoffee", text: "Cafetería"},
-                    {key: 4, className: "col-md-12 cya-done", next: "total", text: "¡Listo!"},
+                    {key: "formal-sweet-table", next: {key: "formalSweetTable"}, className: "col-md-3 cya-sweet-table", text: "Mesa dulce"},
+                    {key: "formal-salty", next: {key: "formalSalty"}, className: "col-md-3 cya-aditional-salty", text: "Salado"},
+                    {key: "formal-drinks", next: {key: "formalDrinks"}, className: "col-md-3 cya-aditional-drinks", text: "Bebidas"},
+                    {key: "formal-coffee", next: {key: "formalCoffee"}, className: "col-md-3 cya-aditional-coffee", text: "Cafetería"},
+                    {key: "done", next: {key: "total"}, className: "col-md-12 cya-done", text: "¡Listo!"},
                 ]
             }
         }
@@ -307,22 +334,25 @@ const pages = {
                 title: "Mesa dulce",
                 description: "1 tarta cada 10 personas:",
                 items: [
-                    {key: 1, text: "Lemon pie."},
-                    {key: 2, text: "Chocotorta."},
-                    {key: 3, text: "Tarta frutal."},
-                    {key: 4, text: "Coco y dulce de leche."},
-                    {key: 5, text: "Pasta frola."},
-                    {key: 6, text: "Appel crumble."},
-                    {key: 7, text: "Invertida de manzana."},
-                    {key: 8, text: "Cheese cake."},
-                    {key: 9, text: "Ricota."},
-                    {key: 10, text: "Milhojas."},
-                    {key: 11, text: "Brownie."},
+                    {key: "lemon-pie", text: "Lemon pie."},
+                    {key: "chocotorta", text: "Chocotorta."},
+                    {key: "tarta-frutal", text: "Tarta frutal."},
+                    {key: "coco-dulce-de-leche", text: "Coco y dulce de leche."},
+                    {key: "pasta-frola", text: "Pasta frola."},
+                    {key: "apple-crumble", text: "Appel crumble."},
+                    {key: "invertida-manzana", text: "Invertida de manzana."},
+                    {key: "cheese-cake", text: "Cheese cake."},
+                    {key: "ricota", text: "Ricota."},
+                    {key: "milhojas", text: "Milhojas."},
+                    {key: "brownie", text: "Brownie."},
                 ],
                 price: {
                     text: "$50 por persona"
                 },
-                next: "formalAditional",
+                next: {
+                    key: "formalAditional",
+                    mustAppend: true
+                }
             }
         }
     },
@@ -332,9 +362,9 @@ const pages = {
             section: {
                 title: "Adicionales salados",
                 options: [
-                    {key: 1, className: "col-md-4 cya-seafood", next: "formalSeafood", text: "Cazuelas"},
-                    {key: 2, className: "col-md-4 cya-pernil", next: "formalPernil", text: "Pernil"},
-                    {key: 3, className: "col-md-4 cya-kids", next: "formalKids", text: "Menú para niños"},
+                    {key: "formal-seafood", next: {key: "formalSeafood"}, className: "col-md-4 cya-seafood", text: "Cazuelas"},
+                    {key: "formal-pernil", next: {key: "formalPernil"}, className: "col-md-4 cya-pernil", text: "Pernil"},
+                    {key: "formal-kids", next: {key: "formalKids"}, className: "col-md-4 cya-kids", text: "Menú para niños"},
                 ]
             }
         }
@@ -356,7 +386,10 @@ const pages = {
                 price: {
                     text: "$100 por persona"
                 },
-                next: "formalAditional",
+                next: {
+                    key: "formalAditional",
+                    mustAppend: true
+                }
             }
         }
     },
@@ -375,7 +408,10 @@ const pages = {
                 price: {
                     text: "$90 por persona"
                 },
-                next: "formalAditional",
+                next: {
+                    key: "formalAditional",
+                    mustAppend: true
+                }
             }
         }
     },
@@ -397,7 +433,10 @@ const pages = {
                 price: {
                     text: "$120 por niño"
                 },
-                next: "formalAditional",
+                next: {
+                    key: "formalAditional",
+                    mustAppend: true
+                }
             }
         }
     },
@@ -417,7 +456,10 @@ const pages = {
                 price: {
                     text: "$50 por persona"
                 },
-                next: "formalAditional",
+                next: {
+                    key: "formalAditional",
+                    mustAppend: true
+                }
             }
         }
     },
@@ -439,7 +481,10 @@ const pages = {
                 price: {
                     text: "$50 por persona"
                 },
-                next: "formalAditional",
+                next: {
+                    key: "formalAditional",
+                    mustAppend: true
+                }
             }
         }
     },
@@ -467,7 +512,9 @@ const pages = {
                     {key: 1, text: "200 ó más"},
                 ],
                 note: "Los precios son válidos durante 30 días.",
-                next: "contact",
+                next: {
+                    key: "contact"
+                }
             }
         }
     },
@@ -479,14 +526,21 @@ class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            key: "home"
+            key: "home",
+            nodes: []
         }
         this.onClick = this.onClick.bind(this)
     }
 
-    onClick(next) {
+    onClick(current) {
+        let nodes = this.state.nodes;
+        if (current.next.mustAppend) {
+            console.log("pushing node: " + JSON.stringify(current));
+            nodes.push(current);
+        }
         this.setState({
-            key: next 
+            key: current.next.key,
+            nodes: nodes
         })
     }
 

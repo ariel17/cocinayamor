@@ -1,9 +1,10 @@
 class SectionPage extends React.Component {
     render() {
+        let data = this.props.data;
         return (
             <div className="container-fluid">
-                <Nav href={this.props.data.nav.href} text={this.props.data.nav.text} items={this.props.data.nav.items} />
-                <Section title={this.props.data.section.title} options={this.props.data.section.options} onClick={this.props.data.onClick}/>
+                <Nav data={data.nav} />
+                <Section data={data.section} />
             </div>
         );
     }
