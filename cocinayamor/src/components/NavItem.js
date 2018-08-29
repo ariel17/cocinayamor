@@ -20,3 +20,5 @@ class NavItem extends React.Component {
         );
     }
 }
+
+export default NavItem;

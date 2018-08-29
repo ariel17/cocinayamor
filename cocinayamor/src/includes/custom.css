@@ -1,0 +1,312 @@
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+html, body, .container-fluid {
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+}
+
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-brand {
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.row-full {
+    min-height: 130%;
+}
+
+.cya-overlay {
+    height: 100%;
+    width: 110%;
+    margin-left: -1em;
+    margin-right: -1em;
+    transition: 0.5s;
+    display: table;
+}
+
+.cya-overlay:hover {
+    background: rgba(3, 92, 161, 0.6);
+    z-index: 2;
+}
+
+.cya-type {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cya-informal {
+    background-image: url("./images/type-informal.jpg");
+}
+
+.cya-formal {
+    background-image: url("./images/type-formal.jpg");
+}
+
+.cya-formal-reception-1 {
+    background-image: url("./images/type-formal-reception-1.jpg");
+}
+
+.cya-formal-reception-2 {
+    background-image: url("./images/type-formal-reception-2.jpg");
+}
+
+.cya-formal-reception-3 {
+    background-image: url("./images/type-formal-reception-3.jpg");
+}
+
+.cya-formal-entry-1 {
+    background-image: url("./images/type-formal-entry-1.jpg");
+}
+
+.cya-formal-entry-2 {
+    background-image: url("./images/type-formal-entry-2.jpg");
+}
+
+.cya-formal-entry-3 {
+    background-image: url("./images/type-formal-entry-3.jpg");
+}
+
+.cya-formal-principal-1 {
+    background-image: url("./images/type-formal-principal-1.jpg");
+}
+
+.cya-formal-principal-2 {
+    background-image: url("./images/type-formal-principal-2.jpg");
+}
+
+.cya-formal-principal-3 {
+    background-image: url("./images/type-formal-principal-3.jpg");
+}
+
+.cya-formal-dessert {
+    background-image: url("./images/type-formal-dessert.jpg");
+}
+
+.cya-common {
+    background-image: url("./images/common.jpg");
+}
+
+.cya-contact {
+    background-image: url("./images/contact.jpg");
+}
+
+.cya-lunch {
+    background-image: url("./images/type-lunch.jpg");
+}
+
+.cya-country {
+    background-image: url("./images/type-country.jpg");
+}
+
+.cya-fingerfood {
+    background-image: url("./images/type-fingerfood.jpg");
+}
+
+.cya-pizzaparty {
+    background-image: url("./images/type-pizzaparty.jpg");
+}
+
+.cya-seafood {
+    background-image: url("./images/type-cazuela.jpg");
+}
+
+.cya-pernil {
+    background-image: url("./images/type-pernil.jpg");
+}
+
+.cya-informal-dessert {
+    background-image: url("./images/type-informal-postre.jpg");
+}
+
+.cya-informal-pizzaparty-1 {
+    background-image: url("./images/type-informal-pizzaparty-1.jpg");
+}
+
+.cya-informal-pizzaparty-2 {
+    background-image: url("./images/type-informal-pizzaparty-2.jpg");
+}
+
+.cya-informal-pizzaparty-3 {
+    background-image: url("./images/type-informal-pizzaparty-3.jpg");
+}
+
+.cya-aditional-sweet {
+    background-image: url("./images/type-informal-aditional-sweet.jpg");
+}
+
+.cya-aditional-salty {
+    background-image: url("./images/type-informal-aditional-salty.jpg");
+}
+
+.cya-aditional-drinks {
+    background-image: url("./images/type-informal-aditional-drinks.jpg");
+}
+
+.cya-aditional-coffee {
+    background-image: url("./images/type-informal-aditional-coffee.jpg");
+}
+
+.cya-sweet-table {
+    background-image: url("./images/type-informal-sweet-table.jpg");
+}
+
+.cya-kids {
+    background-image: url("./images/type-kids.jpg");
+}
+
+.cya-done {
+    background-color: #DC4BFB;
+}
+
+.cya-text {
+    height: 100%;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    transition: 0.5s;
+    font-size: 1.5em;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.cya-title {
+    font-family: 'Berkshire Swash', cursive;
+    color: white;
+    padding: 10px 15px;
+}
+
+.cya-description {
+    color: white;
+    margin-left: 4%;
+    margin-right: 8%;
+}
+
+.cya-description > p {
+    padding-left: 20px;
+}
+
+.cya-description > li > a {
+    color: white;
+    text-decoration: none;
+}
+
+.cya-description-background {
+    background: rgba(3, 92, 161, 0.6);
+    z-index: 2;
+    height: 100%;
+    width: 110%;
+    margin-left: -5%;
+    position: relative;
+}
+
+.cya-text:hover {
+    font-weight: bold;
+    -webkit-transform: scale(1.5);
+}
+
+.cya-border {
+    font-family: 'Berkshire Swash', cursive;
+    margin: 5% 25%;
+    border: 1px solid white;
+}
+
+.cya-border > a {
+    font-family: 'Berkshire Swash', cursive;
+    text-decoration: none;
+    color: white;
+}
+
+.cya-btn-center {
+    display: block;
+    margin: 0 auto;
+}
+
+.cya-btn-primary {
+    color: #720289;
+    background-color: #90DBFB;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 5% 25%;
+    font-size: 1.2em;
+}
+
+.cya-btn-secondary {
+    color: white;
+    background-color: transparent;
+    border-color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 5% 25%;
+}
+
+.cya-section {
+    background-color: #B6CC00;
+    font-size: 1.5em;
+    height: 10%;
+    margin-bottom: -20%;
+    z-index: 2;
+}
+
+.cya-price {
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    margin-top: 40px;
+    font-size: 1.7em;
+}
+
+.cya-margin-40 {
+    margin-top: 40px;
+}
+
+.cya-select {
+    margin: 0 20px;
+    width: 125px;
+    text-align: center;
+    display: inline;
+}
+
+.cya-select > option {
+    text-align: center;
+}
+
+.cya-select-multiple {
+    height: 90%;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+}
+
+.cya-select-multiple:focus {
+    background-color: transparent;
+}
+
+.cya-select-multiple:focus > option {
+    color: white;
+}
+
+.cya-select-multiple:focus > option:checked {
+    color: #720289 !important;
+    background: linear-gradient(0deg, #E5FF09 0%, #E5FF09 100%);
+}
+
+.cya-h30 {
+    height: 30%;
+}
+
+.cya-h60 {
+    height: 60%;
+}
+
+.cya-h70 {
+    height: 70%;
+}

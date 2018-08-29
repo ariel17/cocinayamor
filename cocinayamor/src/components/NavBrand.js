@@ -9,3 +9,5 @@ class NavBrand extends React.Component {
         );
     }
 }
+
+export default NavBrand;
