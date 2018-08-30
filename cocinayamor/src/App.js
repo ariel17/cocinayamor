@@ -7,7 +7,7 @@ const defaultNav = {
         text: "C&A",
     },
     items: [
-        {key: "inicio", href: "index.html", text: "Inicio", active: false},
+        {key: "inicio", href: "index.html", text: "Inicio", active: true},
         {key: "budget", href: "budgets.html", text: "Presupuestos en PDF", active: false},
         {key: "faq", href: "faq.html", text: "FAQ", active: false},
         {key: "contact", href: "contact.html", text: "Contacto", active: false}
