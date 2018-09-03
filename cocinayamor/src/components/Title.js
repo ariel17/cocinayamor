@@ -7,3 +7,6 @@ class Title extends React.Component {
         return <h1 className="text-center cya-title">{data.text}</h1>;
     }
 }
+
+
+export default Title;

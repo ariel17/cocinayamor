@@ -16,7 +16,7 @@ class Nav extends React.Component {
                 <div className="collapse navbar-collapse" id="menu">
                     <ul className="navbar-nav ml-auto">
                         {data.items.map((item, key) => {
-                            return <NavItem key="nav-{key}" data={item} />;
+                            return <NavItem key={'nav-' + key} data={item} />;
                         })}
                     </ul>
                 </div>
