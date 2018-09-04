@@ -2,36 +2,61 @@ import React, { Component } from 'react';
 import Nav from './containers/Nav';
 import Section from './containers/Section';
 
-const navData = {
+const defaultNavData = {
     brand: {
         href: "/",
         text: "C&A",
     },
     items: [
-        {key: "inicio", href: "index.html", text: "Inicio", active: true},
-        {key: "budget", href: "budgets.html", text: "Presupuestos en PDF", active: false},
-        {key: "faq", href: "faq.html", text: "FAQ", active: false},
-        {key: "contact", href: "contact.html", text: "Contacto", active: false}
+        {key: "home", href: "/", text: "Inicio", active: false},
+        {key: "budgets", href: "/budgets/", text: "Presupuestos en PDF", active: false},
+        {key: "faq", href: "/faq/", text: "FAQ", active: false},
+        {key: "contact", href: "/contact/", text: "Contacto", active: false}
     ]
 }
 
-const sectionData = {
-    options: [
-        {next: {key: "formal"}, className: "col-md-3 cya-formal", text: "Formal"},
-        {next: {key: "informal"}, className: "col-md-3 cya-informal", text: "Informal"},
-        {next: {key: "lunch"}, className: "col-md-3 cya-lunch", text: "Lunch"},
-        {next: {key: "campestre"}, className: "col-md-3 cya-country", text: "Campestre"}
-    ]
+function enableNavItem(key) {
+    let nav = { ...defaultNavData };
+    nav.items.forEach(function(i) {
+        i.active = i.key === key;
+    })
+    return nav;
+}
+
+const pagesData = {
+    home: {
+        type: "section",
+        nav: enableNavItem("home"),
+        data: {
+            options: [
+                {next: {key: "formal"}, className: "col-md-3 cya-formal", text: "Formal"},
+                {next: {key: "informal"}, className: "col-md-3 cya-informal", text: "Informal"},
+                {next: {key: "lunch"}, className: "col-md-3 cya-lunch", text: "Lunch"},
+                {next: {key: "campestre"}, className: "col-md-3 cya-country", text: "Campestre"}
+            ]
+        }
+    }
 }
 
 
 
 class App extends Component {
+
+  constructor(props) {
+      super(props);
+      this.state = pagesData.home;
+  }
+
   render() {
+    let body;
+    if (this.state.type === "section") {
+        body = <Section data={this.state.data} />;
+    }
+
     return (
       <div className="container-fluid bg-color-primary-0">
-        <Nav data={navData} />
-        <Section data={sectionData} />
+        <Nav data={this.state.nav} />
+        {body}
       </div>
     );
   }
