@@ -11,32 +11,6 @@ html, body, .container-fluid {
 }
 
 
-.navbar {
-    padding: 0;
-}
-
-.navbar-brand {
-    font-family: 'Berkshire Swash', cursive;
-}
-
-.row-full {
-    min-height: 130%;
-}
-
-.cya-overlay {
-    height: 100%;
-    width: 110%;
-    margin-left: -1em;
-    margin-right: -1em;
-    transition: 0.5s;
-    display: table;
-}
-
-.cya-overlay:hover {
-    background: rgba(3, 92, 161, 0.6);
-    z-index: 2;
-}
-
 .cya-type {
     background-size: cover;
     background-repeat: no-repeat;
@@ -167,23 +141,6 @@ html, body, .container-fluid {
     background-color: #DC4BFB;
 }
 
-.cya-text {
-    height: 100%;
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-    color: white;
-    transition: 0.5s;
-    font-size: 1.5em;
-    font-family: 'Berkshire Swash', cursive;
-}
-
-.cya-title {
-    font-family: 'Berkshire Swash', cursive;
-    color: white;
-    padding: 10px 15px;
-}
-
 .cya-description {
     color: white;
     margin-left: 4%;
@@ -206,23 +163,6 @@ html, body, .container-fluid {
     width: 110%;
     margin-left: -5%;
     position: relative;
-}
-
-.cya-text:hover {
-    font-weight: bold;
-    -webkit-transform: scale(1.5);
-}
-
-.cya-border {
-    font-family: 'Berkshire Swash', cursive;
-    margin: 5% 25%;
-    border: 1px solid white;
-}
-
-.cya-border > a {
-    font-family: 'Berkshire Swash', cursive;
-    text-decoration: none;
-    color: white;
 }
 
 .cya-btn-center {

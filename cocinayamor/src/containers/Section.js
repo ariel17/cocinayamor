@@ -1,7 +1,12 @@
 import React from 'react';
 import Title from '../components/Title';
 import Option from '../components/Option';
+import styled from 'styled-components';
 
+
+const Div = styled.div`
+    min-height: 130%;
+`
 
 class Section extends React.Component {
 
@@ -10,14 +15,14 @@ class Section extends React.Component {
         let title;
 
         if (data.title !== undefined) { 
-            title = <Title data={data.title} />;
+            title = <Title>{data.title}</Title>;
         }
 
-        let section = (<div key="section" className="row row-full">
+        let section = (<Div key="section" className="row">
             {data.options.map((option, key) => {
                 return <Option key={'option-' + key} data={option} />
             })}
-        </div>)
+        </Div>)
 
         return [title, section];
     }

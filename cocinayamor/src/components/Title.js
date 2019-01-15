@@ -1,12 +1,10 @@
-import React from 'react';
+import styled from 'styled-components';
 
-
-class Title extends React.Component {
-    render() {
-        let data = this.props.data;
-        return <h1 className="text-center cya-title">{data.text}</h1>;
-    }
-}
-
+const Title = styled.h1`
+    font-family: 'Berkshire Swash', cursive;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+`
 
 export default Title;

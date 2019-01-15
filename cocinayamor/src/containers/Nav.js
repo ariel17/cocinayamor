@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const defaultNavData = {
     brand: {
@@ -42,6 +43,15 @@ class NavItem extends React.Component {
     }
 }
 
+
+const NavRoot = styled.nav`
+    padding: 0;
+`
+
+const NavbarBrand = styled.a`
+    font-family: 'Berkshire Swash', cursive;
+`
+
 /**
  * 
  */
@@ -56,8 +66,8 @@ class Nav extends React.Component {
         let data = enableNavItem(this.state.enabled)
 
         return (
-            <nav className="navbar navbar-expand-lg navbar-dark">
-                <a className="navbar-brand" href={data.brand.href}>{data.brand.text}</a>
+            <NavRoot className="navbar navbar-expand-lg navbar-dark">
+                <NavbarBrand className="navbar-brand" href={data.brand.href}>{data.brand.text}</NavbarBrand>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -69,7 +79,7 @@ class Nav extends React.Component {
                         })}
                     </ul>
                 </div>
-            </nav>
+            </NavRoot>
         );
     }
 }
