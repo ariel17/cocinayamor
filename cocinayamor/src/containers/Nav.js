@@ -1,14 +1,63 @@
 import React from 'react';
-import NavBrand from '../components/NavBrand';
-import NavItem from '../components/NavItem';
+
+const defaultNavData = {
+    brand: {
+        href: "/",
+        text: "C&A",
+    },
+    items: [
+        {key: "home", href: "/", text: "Inicio", active: false},
+        {key: "budgets", href: "/budgets/", text: "Presupuestos en PDF", active: false},
+        {key: "faq", href: "/faq/", text: "FAQ", active: false},
+        {key: "contact", href: "/contact/", text: "Contacto", active: false}
+    ]
+}
+
+function enableNavItem(key) {
+    let nav = { ...defaultNavData };
+    nav.items.forEach(function(i) {
+        i.active = i.key === key;
+    })
+    return nav;
+}
 
 
-class Nav extends React.Component {
+class NavItem extends React.Component {
+    getClassName() {
+        let className = "nav-item";
+        if (this.props.data.active) {
+            return className + " active";
+        }
+        return className;
+    }
+
     render() {
+        let className = this.getClassName();
         let data = this.props.data;
         return (
+            <li className={className}>
+                <a className="nav-link" href={data.href}>{data.text}</a>
+            </li>
+        );
+    }
+}
+
+/**
+ * 
+ */
+class Nav extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = this.props;
+    }
+
+    render() {
+        let data = enableNavItem(this.state.enabled)
+
+        return (
             <nav className="navbar navbar-expand-lg navbar-dark">
-                <NavBrand data={data.brand} />
+                <a className="navbar-brand" href={data.brand.href}>{data.brand.text}</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
