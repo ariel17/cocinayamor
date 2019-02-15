@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import '../Colors.css';
+import '../../Colors.css';
 import PropTypes from 'prop-types'
 
 const defaultNavData = {
@@ -18,9 +18,11 @@ const defaultNavData = {
 
 function enableNavItem(key) {
     let nav = { ...defaultNavData };
-    nav.items.forEach(function(i) {
-        i.active = i.key === key;
-    })
+    if (key !== "") {
+        nav.items.forEach(function(i) {
+            i.active = i.key === key;
+        })
+    }
     return nav;
 }
 

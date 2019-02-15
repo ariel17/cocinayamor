@@ -14,6 +14,7 @@
 .color-primary-4 { color: #035C83 }
 
 .bg-color-primary-0 { background-color: #14B4F9 }
+.bg-color-primary-1 { background-color: #90DBFB }
 
 .color-secondary-1-0 { color: #D10FF9 }	/* Main Secondary color (1) */
 .color-secondary-1-1 { color: #E88EFB }
@@ -21,12 +22,15 @@
 .color-secondary-1-3 { color: #C701F1 }
 .color-secondary-1-4 { color: #710289 }
 
+.bg-color-secondary-1-0 { background-color: #D10FF9 }	/* Main Secondary color (1) */
+
 .color-secondary-2-0 { color: #E4FF09 }	/* Main Secondary color (2) */
 .color-secondary-2-1 { color: #F3FF8D }
 .color-secondary-2-2 { color: #EBFF47 }
 .color-secondary-2-3 { color: #E3FE00 }
 .color-secondary-2-4 { color: #B6CC00 }
 
+.bg-color-secondary-2-0 { background-color: #E4FF09 }	/* Main Secondary color (2) */
 
 
 /* As RGBa codes */
