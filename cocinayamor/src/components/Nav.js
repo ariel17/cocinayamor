@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import '../Colors.css';
 import PropTypes from 'prop-types'
 
 const defaultNavData = {
@@ -8,10 +9,10 @@ const defaultNavData = {
         text: "C&A",
     },
     items: [
-        {key: "home", href: "/", text: "Inicio", active: false},
-        {key: "budgets", href: "/budgets/", text: "Presupuestos en PDF", active: false},
-        {key: "faq", href: "/faq/", text: "FAQ", active: false},
-        {key: "contact", href: "/contact/", text: "Contacto", active: false}
+        {key: "home", href: "/", text: "Inicio"},
+        {key: "budgets", href: "/budgets/", text: "Presupuestos en PDF"},
+        {key: "faq", href: "/faq/", text: "FAQ"},
+        {key: "contact", href: "/contact/", text: "Contacto"}
     ]
 }
 
@@ -24,7 +25,7 @@ function enableNavItem(key) {
 }
 
 
-class NavItem extends React.Component {
+class Item extends React.Component {
     getClassName() {
         let className = "nav-item";
         if (this.props.data.active) {
@@ -45,41 +46,30 @@ class NavItem extends React.Component {
 }
 
 
-const NavRoot = styled.nav`
+const Root = styled.nav`
     padding: 0;
 `
 
-const NavbarBrand = styled.a`
+const Brand = styled.a`
     font-family: 'Berkshire Swash', cursive;
 `
 
 /**
- * Navigation bar, for whole site.
+ * Navigation bar, for whole site. Brand and items properties are immutable.
  */
 class Nav extends React.Component {
     static propTypes = {
         /**
          * Indicates the navigation item that must be enabled by name, to
-         * highlight current page location.
+         * highlight current page location. It can take one of the following
+         * values:
+         *
+         * * `home`
+         * * `budgets`
+         * * `faq`
+         * * `contact`
          */
-        enabled: PropTypes.string,
-        /**
-         * Contains the brand link configuration.
-         */
-        brand: PropTypes.shape({
-            /** The URL to redirect. */
-            href: PropTypes.string,
-            /** The text to show in link. */
-            text: PropTypes.string
-        }),
-        items: PropTypes.arrayOf(PropTypes.shape({
-            /** The unique item identification as key index. */
-            key: PropTypes.string,
-            /** The URL to the section in page. */
-            href: PropTypes.string,
-            /** The text to show as section name. */
-            text: PropTypes.string
-        }))
+        enabled: PropTypes.string
     }
 
     constructor(props) {
@@ -91,8 +81,8 @@ class Nav extends React.Component {
         let data = enableNavItem(this.state.enabled)
 
         return (
-            <NavRoot className="navbar navbar-expand-lg navbar-dark">
-                <NavbarBrand className="navbar-brand" href={data.brand.href}>{data.brand.text}</NavbarBrand>
+            <Root className="navbar navbar-expand-lg navbar-dark bg-color-primary-0">
+                <Brand className="navbar-brand" href={data.brand.href}>{data.brand.text}</Brand>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -100,11 +90,11 @@ class Nav extends React.Component {
                 <div className="collapse navbar-collapse" id="menu">
                     <ul className="navbar-nav ml-auto">
                         {data.items.map((item, key) => {
-                            return <NavItem key={'nav-' + key} data={item} />;
+                            return <Item key={'nav-' + key} data={item} />;
                         })}
                     </ul>
                 </div>
-            </NavRoot>
+            </Root>
         );
     }
 }
