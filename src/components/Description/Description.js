@@ -1,9 +1,24 @@
+import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types'
 
-const Description = styled.div`
-    color: white;
+type Props = {
+    /**
+     * The font color to use.
+     */
+    color?: PropTypes.string
+}
+
+const Div = styled.div`
+    color: ${(props: Props) => props.color || "white"};
     margin-left: 4%;
     margin-right: 8%;
-
 `
+
+const Description = (props: Props) => <Div {...props} />
+
+Description.defaultProps = {
+  color: 'white'
+}
+
 export default Description
