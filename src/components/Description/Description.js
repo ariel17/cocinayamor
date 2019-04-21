@@ -14,7 +14,9 @@ const Div = styled.div`
     margin-left: 4%;
     margin-right: 8%;
 `
-
+/**
+ * A long text description to display.
+ */
 const Description = (props: Props) => <Div {...props} />
 
 Description.defaultProps = {

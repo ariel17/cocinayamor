@@ -1,5 +1,3 @@
-Using description for long text:
-
 ```js
 <Description color="blue">
   Lorem Ipsum is simply dummy text of the printing and typesetting industry.

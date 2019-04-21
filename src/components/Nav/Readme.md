@@ -1,5 +1,4 @@
 Enabling "Home" option:
-
 ```js
 <Nav enabled='home' />
 ```

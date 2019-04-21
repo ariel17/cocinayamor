@@ -1,17 +1,15 @@
 Section with title:
 ```js
-const options = [
-  {"key": "1", "onClick": function(){ alert('Hello option 1!'); }, "text": "Option 1"},
-  {"key": "2", "onClick": function(){ alert('Hello option 2!'); }, "text": "Option 2"}
-];
-<Section title="Awesome title" options={options} />
+<Section title="Awesome title">
+  <Option onClick={() => { alert('Hello option 1!'); }}>Option 1</Option>
+  <Option onClick={() => { alert('Hello option 2!'); }}>Option 2</Option>
+</Section>
 ```
 
 Section without title:
 ```js
-const options = [
-  {"key": "1", "onClick": function(){ alert('Hello option 1!'); }, "text": "Option 1"},
-  {"key": "2", "onClick": function(){ alert('Hello option 2!'); }, "text": "Option 2"}
-];
-<Section options={options} />
+<Section>
+  <Option onClick={() => { alert('Hello option 1!'); }}>Option 1</Option>
+  <Option onClick={() => { alert('Hello option 2!'); }}>Option 2</Option>
+</Section>
 ```

@@ -55,16 +55,8 @@ const Link = styled.button`
  */
 class Option extends React.Component {
     static propTypes = {
-        /** CSS class name to customize styles, if present. */
-        className: PropTypes.string,
         /** On-click event to fire on user selection. */
         onClick: PropTypes.func.isRequired,
-        /** Option name to show. */
-        text: PropTypes.string.isRequired
-    }
-
-    static defaultProps = {
-        className: ""
     }
 
     constructor(props) {
@@ -74,10 +66,10 @@ class Option extends React.Component {
 
     render() {
         return (
-            <Container className={'col-sm-12 cya-type bg-color-primary-0 ' + this.state.className}>
+            <Container className="col-sm-12 cya-type bg-color-primary-0">
                 <Overlay>
                     <Text>
-                        <Boder><Link type="button" className="btn btn-link" onClick={this.state.onClick}>{this.state.text}</Link></Boder>
+                        <Boder><Link type="button" className="btn btn-link" onClick={this.state.onClick}>{this.props.children}</Link></Boder>
                     </Text>
                 </Overlay>
             </Container>

@@ -1,6 +1,5 @@
 import React from 'react';
 import Title from '../Title';
-import Option from '../Option';
 import '../../Colors.css';
 import PropTypes from 'prop-types'
 
@@ -41,13 +40,7 @@ class Section extends React.Component {
                 <Title className="col-sm-12 bg-color-secondary-2-0">{this.state.title}</Title>
             </div>);
         }
-
-        let section = (<div key="section" className="row">
-            {this.state.options.map((option, key) => {
-                return <Option key={'option-' + key} { ...option } />
-            })}
-        </div>)
-
+        let section = (<div key="section" className="row">{this.props.children}</div>)
         return <div>{title}{section}</div>;
     }
 }
